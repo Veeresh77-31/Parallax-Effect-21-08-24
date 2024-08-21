@@ -1,109 +1,84 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
-* {
+body,
+html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
 }
-a {
-  text-decoration: none;
+
+/* General styles for content sections */
+.parallax div {
+  text-align: center;
+  width: 500px;
+  color: white;
 }
-.hero {
-  width: 100%;
+
+.parallax {
   height: 100vh;
-  background: url(img/bg.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-}
-nav {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 30px 100px;
 }
-.logo {
-  max-height: 60px;
+
+.parallax-1 {
+  background-image: url("https://img.freepik.com/free-vector/natural-evening-landscape-with-green-hills_126523-20.jpg?t=st=1724256751~exp=1724260351~hmac=13f801f422eec878184205822b1f0e38c50cf6c7cc5c5ac5a8b844b0d1c2c4cc&w=1380");
 }
-nav ul li {
-  list-style: none;
-  display: inline-block;
+
+.parallax-2 {
+  background-image: url("https://img.freepik.com/free-vector/gradient-lake-scenery_23-2149151145.jpg?t=st=1724257016~exp=1724260616~hmac=8e44847f02bfbfcc3e2139c63155d154beac42c215a37824995f9556b76365ab&w=1380");
+}
+
+.parallax-3 {
+  background-image: url("https://img.freepik.com/free-vector/night-scene-with-lake-mountains-moon-sky_107791-20559.jpg?t=st=1724257070~exp=1724260670~hmac=b1df116ae1abe6e77eafd0abea9c107c054130b66dd1af430c5567485d26ab08&w=1380");
+}
+
+.parallax-4 {
+  background-image: url("https://img.freepik.com/free-vector/hand-drawn-flat-winter-solstice-background_23-2149193493.jpg?t=st=1724257118~exp=1724260718~hmac=de1b5522b03fafb1e3a2d43bfbdab0a760f171a5cfb925205b09457b1fe012b2&w=996");
+}
+
+.parallax-5 {
+  background-image: url("https://img.freepik.com/free-vector/hills-with-green-grass-conifers-sunset_107791-10012.jpg?t=st=1724257179~exp=1724260779~hmac=f335829db5fde90f6c60e528f9b4b078217dfe734d1ff2e6b39a564357a3ab0c&w=1380");
+}
+
+/* Section headers */
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 20%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 3em;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 20%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 2em;
+}
+
+/* Button styling */
+button {
+  display: block;
+  margin: 20px auto;
   padding: 10px 20px;
-}
-nav ul li a {
-  color: #1d1d24;
-  position: relative;
-  padding: 5px 0;
-}
-nav ul li a:hover {
-  color: #fd4766;
-}
-nav ul li a:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: #fd4766;
-  transition: 0.3s;
-  bottom: 0;
-}
-nav ul li a:hover:after {
-  width: 100%;
-}
-.btn {
+  font-size: 1em;
   color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 16px 40px;
-  border-radius: 500px;
-  display: inline-block;
-  font-weight: 500;
-  transition: all 0.4s ease-in-out;
-  background-size: 152% 100%;
-  background: #fd4766;
-  border: 2px solid #fd4766;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.btn:hover {
-  background: transparent;
-  border-color: #fd4766;
-  color: #fd4766;
-}
-.content {
-  position: absolute;
-  top: 35%;
-  left: 8%;
-}
-.content .title {
-  color: #0a0a0a;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  display: inline-block;
-  margin-bottom: 20px;
-  background: linear-gradient(
-    120deg,
-    #1c99fe 20.69%,
-    #7644ff 50.19%,
-    #fd4766 79.69%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.content h1 {
-  color: #1f1f25;
-  font-size: 75px;
-  font-weight: 900;
-  line-height: 90px;
-  text-transform: inherit;
-  width: 70%;
-}
-.content h1 span {
-  color: #fd4766;
-}
-.content p {
-  width: 55%;
-  color: #202020;
-  margin-top: 25px;
-  margin-bottom: 30px;
+
+button:hover {
+  background-color: #0056b3;
 }
